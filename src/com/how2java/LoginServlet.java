@@ -24,6 +24,7 @@ public class LoginServlet extends HttpServlet {
         UsernamePasswordToken token = new UsernamePasswordToken(name, password);  
         try {  
             subject.login(token);
+
             Session session=subject.getSession();
             session.setAttribute("subject", subject);
             
